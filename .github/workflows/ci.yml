@@ -39,8 +39,8 @@ jobs:
           sudo apt-get install -y podman
           sudo apt autoremove -y
           sudo systemctl start podman
-          systemctl start podman.socket
-          systemctl status podman.socket ||:
+          sudo systemctl start podman.socket
+          sudo systemctl status podman.socket ||:
       - name: use podman
         run: podman --version
           
